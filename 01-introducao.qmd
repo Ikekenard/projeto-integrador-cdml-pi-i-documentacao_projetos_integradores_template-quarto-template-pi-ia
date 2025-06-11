@@ -1,4 +1,8 @@
-# Introdução
+---
+engine: python # 
+---
+
+# Objetivos e Motivações:
 
 A presença dos estudantes em sala de aula tem sido historicamente apontada como um dos fatores que influenciam o desempenho acadêmico. Em um contexto educacional cada vez mais orientado por dados, compreender como a frequência impacta as notas dos alunos pode oferecer insights relevantes para instituições de ensino, professores e gestores.
 

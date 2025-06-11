@@ -1,3 +1,7 @@
+---
+engine: python # 
+---
+
 # Referências
 
 As referências estão organizadas no arquivo `.bib` e serão exibidas automaticamente.

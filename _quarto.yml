@@ -1,7 +1,6 @@
-# GITHub:
 project:
-  type: book
-  output-dir: _book # pasta onde os arquivos gerados serão salvos
+  type: book # Tipo de projeto: livro
+  output-dir: dosc # Pasta onde os arquivos gerados (HTML, PDF) serão salvos
 
 book:
   title: "Projeto Integrador I: Análise de Desempenho Acadêmico x Presença em Sala"
@@ -19,33 +18,38 @@ book:
 format:
   pdf:
     pdf-engine: lualatex
-    include-in-header: contracapa.tex # adiciona a contracapa no estilo ABNT
+    include-in-header: contracapa.tex
     toc: true
     number-sections: true
   html:
     toc: true
     number-sections: true
-    theme: cosmo # ou outra como: united, flatly, simplex, etc.
+    theme: cosmo
     self-contained: true
 
 execute:
+  engine: python
   echo: true
   eval: true
-  freeze: false # sempre reexecuta os blocos de código Python
+  freeze: false
 
 editor: visual
-# # HTML options:
-# website:
-#   title: "Projeto Integrador I"
-#   navbar:
-#     left:
-#       - text: "Início"
-#         href: index.html
-#   page-navigation: true
 
-#   # importante para GitHub Pages
-#   repo-url: https://github.com/ikekenard/projeto-integrador-cdml/grupos-pi-i-2025-projeto_5_ike.git
-#   repo-actions: [edit, issue]
+# --- Configurações de Preview para Host e Porta Padrão ---
+preview:
+  port: 8808 # Porta padrão para o servidor de pré-visualização (ex: 5000)
+  host: 127.0.0.1 # Host padrão (localhost)
+  browser: false # Abre o navegador automaticamente (padrão é true)
+  # watch-inputs: true # Re-renderiza arquivos quando mudam (padrão é true)
+  # navigate: true # Navega automaticamente no navegador quando a saída é atualizada (padrão é true)
 
-#   # pasta usada pelo GitHub Pages
-#   output-dir: docs
+# --- Configurações para GitHub Pages e Recursos do Repositório ---
+website:
+  title: "Projeto Integrador I"
+  navbar:
+    left:
+      - text: "Início"
+        href: index.html
+  page-navigation: true
+  repo-url: https://github.com/ikekenard/projeto-integrador-cdml/grupos-pi-i-2025-projeto_5_ike.git
+  repo-actions: [edit, issue]
