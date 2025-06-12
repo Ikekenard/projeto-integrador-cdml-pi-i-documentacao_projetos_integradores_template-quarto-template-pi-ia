@@ -1,6 +1,6 @@
 project:
   type: book # Tipo de projeto: livro
-  output-dir: dosc # Pasta onde os arquivos gerados (HTML, PDF) serão salvos
+  output-dir: docs # Pasta onde os arquivos gerados (HTML, PDF) serão salvos
 
 book:
   title: "Projeto Integrador I: Análise de Desempenho Acadêmico x Presença em Sala"
