@@ -1,13 +1,14 @@
 ---
 engine: python # 
+format: pdf
 ---
 
-# Objetivos e Motivações:
+# 1 - Objetivos e Motivações:
 
-Historicamente, a presença dos estudantes em sala de aula está ligada a um desempenho acadêmico superior. Este projeto visa examinar a conexão entre a presença dos alunos e seus resultados finais, bem como criar uma solução tecnológica para o controle de presença por meio de RFID.
+Historicamente, a presença dos estudantes em sala de aula está ligada a um desempenho acadêmico superior. Este projeto visa examinar a conexão entre a presença dos alunos e seus resultados finais, bem como provar que a viabilidade do RFID para uma melhor auxílio acadêmico
 
 Através da avaliação de registros históricos de presença e notas, nosso objetivo é produzir percepções que fundamentem e fortifiquem a implementação de um sistema automatizado de controle de frequência nas instituições educacionais.
 
-O primeiro passo emprega algoritmos de aprendizado de máquina, mais especificamente regressão com floresta aleatória, para analisar o efeito da frequência no rendimento escolar. Esta avaliação tem como objetivo fundamentar as decisões dos interessados e apoiadores do projeto.
+O primeiro passo emprega algoritmos de aprendizado de máquina, mais especificamente um Random Forest Regressor (RFR) e uma Regressão Linear (RL), para analisar o efeito da frequência no rendimento escolar. Esta avaliação tem como objetivo fundamentar as decisões dos interessados e apoiadores do projeto.
 
 A importância desta pesquisa está na procura por soluções que aprimorem os processos acadêmicos, aprimorem o monitoramento dos estudantes e, consequentemente, auxiliem na melhoria da qualidade da educação.

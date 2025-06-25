@@ -1,10 +1,17 @@
 project:
-  type: book # Tipo de projeto: livro
-  output-dir: docs # Pasta onde os arquivos gerados (HTML, PDF) serão salvos
+  type: book
+  output-dir: docs
 
 book:
   title: "Projeto Integrador I: Análise de Desempenho Acadêmico x Presença em Sala"
-  author: "Seu Nome Completo"
+  author:
+    - Ike Gabriel Rodrigues Kenard,
+    - Leonardo de Lima Amaral,
+    - Marcelo Saraiva Cavalvanti,
+    - Vitor Nascimento Franco,
+    - Rafael Mascarenhas Brown de Andrade,
+    - Alessandra de Souza Gonçalves,
+    - Rodrigo Lins Bezerra Magalhaes
   date: today
   chapters:
     - index.qmd
@@ -18,15 +25,17 @@ book:
 format:
   pdf:
     pdf-engine: lualatex
-    documentclass: article
-    include-in-header: contracapa.tex
+    documentclass: book
+    include-before-body: contracapa.tex
     toc: false
-    number-sections: true
+    number-sections: false
+    bibliography: refs.bib
   html:
     toc: true
-    number-sections: true
+    number-sections: false
     theme: cosmo
     self-contained: true
+    bibliography: refs.bib
 
 execute:
   engine: python
@@ -36,15 +45,11 @@ execute:
 
 editor: visual
 
-# --- Configurações de Preview para Host e Porta Padrão ---
 preview:
-  port: 8808 # Porta padrão para o servidor de pré-visualização (ex: 5000)
-  host: 127.0.0.1 # Host padrão (localhost)
-  browser: false # Abre o navegador automaticamente (padrão é true)
-  # watch-inputs: true # Re-renderiza arquivos quando mudam (padrão é true)
-  # navigate: true # Navega automaticamente no navegador quando a saída é atualizada (padrão é true)
+  port: 8808
+  host: 127.0.0.1
+  browser: false
 
-# --- Configurações para GitHub Pages e Recursos do Repositório ---
 website:
   title: "Projeto Integrador I"
   navbar:

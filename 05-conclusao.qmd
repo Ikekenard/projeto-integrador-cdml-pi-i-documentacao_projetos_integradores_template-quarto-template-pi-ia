@@ -1,8 +1,9 @@
 ---
 engine: python # 
+format: pdf
 ---
 
-# Conclusão
+# 5 - Conclusão
 
 Nossa análise mostrou que **faltar às aulas** $(Absence")$ é um fator que mais pesa na previsão do desempenho dos alunos, com uma importância de cerca de 0.18. Isso significa que quanto mais um aluno falta, pior tende a ser seu desempenho. Nossos testes iniciais da Regressão Linear também apontam para essa relação, mesmo que o resultado do R² tenha dado 0.10 sugira que há mais a ser explorado.
 
@@ -13,3 +14,9 @@ A tecnologia RFID surge como uma solução promissora para melhorar o controle d
 É importante destacar que, apesar dessas descobertas claras, o desempenho dos alunos é algo complexo e exige mais investigação. Por isso, é fundamental expandir nossas análises para incluir outros fatores, como a participação em atividades extras, o desempenho em provas contínuas, o histórico escolar completo e, especialmente, questões socioeconômicas dos alunos.
 
 Em resumo, este projeto prova a importância do controle automático de presença para o avanço acadêmico. Ele oferece uma base sólida para futuras ações, mas também sublinha a necessidade de pesquisar mais a fundo para entender todos os elementos que influenciam o sucesso educacional.
+
+Em resumo, com o RFID avançaremos na análise de dados por que passaríamos a capitar algo algo que uma chamada normal não apresenta:\
+
+1 - Se o aluno aproveita o tempo todo de cada aula do ano ou não (deixamos de ficar limitados a condição 'binária' de Presença ou Falta;
+
+2 - E assim testar se os alunos, em geral, chegam pontualmente, no contexto do ceub às 8h e saem as 10:50h, apresentam melhor rendimento do que outros que têm o costume de chegar atrasado (e o nivel de atraso), ou quem têm o costume de sair bem mais cedo.

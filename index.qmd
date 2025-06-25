@@ -1,12 +1,6 @@
 ---
-engine: python # 
----
-
-# Projeto Integrador I
-
----
-title: "Análise de Desempenho Acadêmico com Base na Frequência em Sala"
-author: "Ike Gabriel Rodrigues de Kenard, Leonardo de Lima Amaral, Alessandra Gonçalves de Souza"
+title: "P1 - Análise de Desempenho Acadêmico com Base na Frequência em Sala"
+author: "Ike Gabriel, Leoanrdo Amaral, Marcelo Cavalvanti, Vitor Nascimento, Rafael Mascarenhas, Alessandra Gonçalves, Rodrigo Lins"
 date: "2025"
 format:
   pdf:
@@ -24,11 +18,10 @@ Do ponto de vista analítico, o projeto aplica técnicas de Análise de Séries 
 
 O trabalho está estruturado em cinco capítulos, além desta introdução:
 
-- **Capítulo 1 – Introdução**: apresenta o problema, os objetivos e a justificativa da proposta.
-- **Capítulo 2 – Metodologia**: descreve as etapas de desenvolvimento e as ferramentas utilizadas.
-- **Capítulo 3 – Desenvolvimento**: detalha a implementação técnica do sistema.
-- **Capítulo 4 – Resultados**: exibe gráficos, análises e métricas obtidas.
-- **Capítulo 5 – Conclusão**: discute os aprendizados e as possibilidades de evolução do projeto.
+-   **Capítulo 1 – Introdução**: apresenta o problema, os objetivos e a justificativa da proposta.
+-   **Capítulo 2 – Metodologia**: descreve as etapas de desenvolvimento e as ferramentas utilizadas.
+-   **Capítulo 3 – Desenvolvimento**: detalha a implementação das tecnicas utilzadas e análises feitas.
+-   **Capítulo 4 – Resultados**: exibe gráficos, análises e métricas obtidas.
+-   **Capítulo 5 – Conclusão**: discute os aprendizados e as possibilidades de evolução do projeto.
 
 Espera-se que esta iniciativa contribua para uma gestão educacional mais inteligente, baseada em dados confiáveis e análises precisas.
-

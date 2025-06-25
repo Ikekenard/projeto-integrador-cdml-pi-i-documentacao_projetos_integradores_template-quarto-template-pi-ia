@@ -1,32 +1,34 @@
 ---
 engine: python # 
+format: pdf
 ---
 
-# Resultados
+# 4 - Resultados
 
 ## Variaveis com Maior Relevância:
- ![](imagens/grafico_imp_vrs.png.png)
 
-**Interpretação das variaveis: É notoória como para o modelo a variavel $Absence$ (falatas/aussncia) se mostrou como a mais relevante para a resolução do problema**
+![](imagens/grafico_imp_vrs.png.png)
+
+**Interpretação das variaveis: É notoória como para o modelo a variavel** $Absence$ (falatas/aussncia) se mostrou como a mais relevante para a resolução do problema
 
 ## Métricas Random Forest Regressor:
- ![](imagens/metrics.png)
 
-Média R2: 0.82 Indica Bom ajuste;
-MAE: 1.25 Indica de baixa precisão média;
-MSE: 2.79 Indica que o modedelo está dentro de uma faixa tolerável, melhorando a precisão das previsões.
+![](imagens/metrics.png)
+
+Média R2: 0.82 Indica Bom ajuste; MAE: 1.25 Indica de baixa precisão média; MSE: 2.79 Indica que o modedelo está dentro de uma faixa tolerável, melhorando a precisão das previsões.
 
 Esses achados corroboram a hipótese inicial: existe uma correlação significativa entre a presença dos estudantes e suas notas.
 
-Análise de Overfitting (RandomForest) 
+Análise de Overfitting (RandomForest)
 
 Observe se o R² de treinamento é similar ao de teste, indicando menor propensão a overfiting
 
 ## Métricas Regressão liniear :
 
-* **Mean Absolute Error (MAE):** 3.41
-* **Mean Squared Error (MSE):** 20.27
-* **R-squared (R²):** 0.10
+-   **Mean Absolute Error (MAE):** 3.41
+-   **Mean Squared Error (MSE):** 20.27
+-   **R-squared (R²):** 0.10
 
-## **Interpretação dos modelos:** 
+## **Interpretação dos modelos:**
+
 Estratégias voltadas para o aumento da frequência dos alunos podem levar a melhorias significativas no desempenho dos alunos. Essas percepções foram cruciais para demonstrar aos interessados a viabilidade da implementação do sistema RFID.
