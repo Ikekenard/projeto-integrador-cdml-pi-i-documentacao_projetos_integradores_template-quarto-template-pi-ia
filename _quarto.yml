@@ -18,8 +18,9 @@ book:
 format:
   pdf:
     pdf-engine: lualatex
+    documentclass: article
     include-in-header: contracapa.tex
-    toc: true
+    toc: false
     number-sections: true
   html:
     toc: true

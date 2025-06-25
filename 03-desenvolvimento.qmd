@@ -4,6 +4,24 @@ engine: python #
 
 # Desenvolvimento
 
-Detalhe o processo de implementação.
 
-## Arquitetura da Solução
+## Análise Exploratória
+
+Realizaram-se análises estatísticas e gráficos, com ênfase em:
+
+### A atribuição das pontuações aos estudantes.
+ #### Gŕaico de barras comparando notas estudantes de cada escola
+
+### A distribuição da frequência.
+ #### Histograma de frequencia de cada escola
+
+### Relação entre presença e pontuação.
+ #### Heatmap de presença x pontuação por escola
+
+Essas avaliações evidenciaram uma tendência evidente: estudantes que frequentam mais frequentemente tendem a alcançar melhores desempenhos acadêmicos.
+
+### Hiperparâmetros do Random Forest Regressor:
+
+ * Quantidade de estimadores: 100
+ * Profundidade máxima (max_depth): Não definida (árvores se desenvolveram de forma autônoma)
+ * Estado Aleatório: 42 (para replicabilidade)
