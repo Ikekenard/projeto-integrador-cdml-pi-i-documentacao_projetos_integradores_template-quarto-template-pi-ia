@@ -12,3 +12,15 @@ Através da avaliação de registros históricos de presença e notas, nosso obj
 O primeiro passo emprega algoritmos de aprendizado de máquina, mais especificamente um Random Forest Regressor (RFR) e uma Regressão Linear (RL), para analisar o efeito da frequência no rendimento escolar. Esta avaliação tem como objetivo fundamentar as decisões dos interessados e apoiadores do projeto.
 
 A importância desta pesquisa está na procura por soluções que aprimorem os processos acadêmicos, aprimorem o monitoramento dos estudantes e, consequentemente, auxiliem na melhoria da qualidade da educação.
+
+## Relatório de Entregas da Equipe
+
+Este relatório detalha as principais contribuições de cada membro da equipe nas entregas do projeto:
+
+- Alessandra Gonçalves: Realizou a correção e revisão final dos textos.
+- Ike Kenard: Responsável pela organização de 90% da documentação, incluindo a reestruturação de gráficos e a revisão de textos do documento principal.
+- Leonardo Amaral: Desenvolveu as duas apresentações do projeto e a estrutura geral do mesmo.
+- Marcelo Cavalcanti: Realizou a análise estatística e desenvolveu o modelo do projeto.
+- Rafael Andrade: Conduziu a análise de dados de Business Intelligence (BI).
+- Rodrigo Magalhaes: Conduziu a pesquisa de bases de dados relevantes.
+- Vitor Franco: Elaborou os textos e gerou os gráficos presentes no documento.

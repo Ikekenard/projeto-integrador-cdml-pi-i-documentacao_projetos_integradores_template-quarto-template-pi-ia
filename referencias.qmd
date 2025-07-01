@@ -6,5 +6,11 @@ engine: python #
 
 As referências estão organizadas no arquivo `.bib` e serão exibidas automaticamente.
 
+## Base de dados utilizada
+https://www.kaggle.com/datasets/whenamancodes/student-performance/data
+
+## Estudo para o trabalho
+https://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf
+
 ::: {#refs}
 :::

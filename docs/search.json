@@ -1,0 +1,192 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Projeto Integrador I: Análise de Desempenho Acadêmico x Presença em Sala",
+    "section": "",
+    "text": "Apresentação Geral\nEste relatório tem como objetivo apresentar o desenvolvimento do Projeto Integrador I do curso de Ciência de Dados e Machine Learning do Centro Universitário de Brasília (CEUB). O projeto foi idealizado com foco na automatização da coleta de presença dos alunos em sala de aula e na análise da relação entre frequência e desempenho acadêmico, utilizando conceitos e ferramentas de ciência de dados.\nA proposta surgiu da necessidade de tornar o processo de chamada mais eficiente, confiável e capaz de fornecer informações relevantes para a gestão acadêmica. Para isso, foi projetado um sistema que integra hardware (RFID UHF), backend (API para ingestão de dados em tempo real), pipelines de tratamento e dashboards analíticos.\nDo ponto de vista analítico, o projeto aplica técnicas de Análise de Séries Temporais para compreender como a frequência dos estudantes evolui ao longo do tempo e de que forma ela se correlaciona com suas notas. Essa abordagem visa oferecer insights acionáveis para professores e coordenadores sobre o comportamento dos alunos.\nO trabalho está estruturado em cinco capítulos, além desta introdução:\n\nCapítulo 1 – Introdução: apresenta o problema, os objetivos e a justificativa da proposta.\nCapítulo 2 – Metodologia: descreve as etapas de desenvolvimento e as ferramentas utilizadas.\nCapítulo 3 – Desenvolvimento: detalha a implementação das tecnicas utilzadas e análises feitas.\nCapítulo 4 – Resultados: exibe gráficos, análises e métricas obtidas.\nCapítulo 5 – Conclusão: discute os aprendizados e as possibilidades de evolução do projeto.\n\nEspera-se que esta iniciativa contribua para uma gestão educacional mais inteligente, baseada em dados confiáveis e análises precisas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Apresentação Geral</span>"
+    ]
+  },
+  {
+    "objectID": "01-introducao.html",
+    "href": "01-introducao.html",
+    "title": "Objetivos e Motivações:",
+    "section": "",
+    "text": "Relatório de Entregas da Equipe\nHistoricamente, a presença dos estudantes em sala de aula está ligada a um desempenho acadêmico superior. Este projeto visa examinar a conexão entre a presença dos alunos e seus resultados finais, bem como provar que a viabilidade do RFID para uma melhor auxílio acadêmico\nAtravés da avaliação de registros históricos de presença e notas, nosso objetivo é produzir percepções que fundamentem e fortifiquem a implementação de um sistema automatizado de controle de frequência nas instituições educacionais.\nO primeiro passo emprega algoritmos de aprendizado de máquina, mais especificamente um Random Forest Regressor (RFR) e uma Regressão Linear (RL), para analisar o efeito da frequência no rendimento escolar. Esta avaliação tem como objetivo fundamentar as decisões dos interessados e apoiadores do projeto.\nA importância desta pesquisa está na procura por soluções que aprimorem os processos acadêmicos, aprimorem o monitoramento dos estudantes e, consequentemente, auxiliem na melhoria da qualidade da educação.\nEste relatório detalha as principais contribuições de cada membro da equipe nas entregas do projeto:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Objetivos e Motivações:</span>"
+    ]
+  },
+  {
+    "objectID": "01-introducao.html#relatório-de-entregas-da-equipe",
+    "href": "01-introducao.html#relatório-de-entregas-da-equipe",
+    "title": "Objetivos e Motivações:",
+    "section": "",
+    "text": "Alessandra Gonçalves: Realizou a correção e revisão final dos textos.\nIke Kenard: Responsável pela organização de 90% da documentação, incluindo a reestruturação de gráficos e a revisão de textos do documento principal.\nLeonardo Amaral: Desenvolveu as duas apresentações do projeto e a estrutura geral do mesmo.\nMarcelo Cavalcanti: Realizou a análise estatística e desenvolveu o modelo do projeto.\nRafael Andrade: Conduziu a análise de dados de Business Intelligence (BI).\nRodrigo Magalhaes: Conduziu a pesquisa de bases de dados relevantes.\nVitor Franco: Elaborou os textos e gerou os gráficos presentes no documento.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Objetivos e Motivações:</span>"
+    ]
+  },
+  {
+    "objectID": "02-metodologia.html",
+    "href": "02-metodologia.html",
+    "title": "Métodologia:",
+    "section": "",
+    "text": "Dicionário de Variáveis\nEste projeto fez uso de informações públicas sobre o rendimento de alunos do ensino secundário de duas instituições de ensino portuguesas: Gabriel Pereira (GP) e Mousinho da Silveira (MS). A coleta de dados ocorreu através de relatórios escolares e questionários aplicados aos estudantes.\nO dataset possui características associadas a:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Métodologia:</span>"
+    ]
+  },
+  {
+    "objectID": "02-metodologia.html#dicionário-de-variáveis",
+    "href": "02-metodologia.html#dicionário-de-variáveis",
+    "title": "Métodologia:",
+    "section": "",
+    "text": "school: escola do estudante (GP ou MS)\nsex: gênero (F ou M)\nage: idade (15 a 22 anos)\naddress: tipo de endereço (U - urbano, R - rural)\nfamsize: tamanho da família (LE3 ≤ 3, GT3 &gt; 3)\nPstatus: situação de coabitação dos pais (T - juntos, A - separados)\nreason: motivo para escolha da escola (home, reputation, course, other)\nMjob / Fjob: profissão da mãe/pai (teacher, health, services, at_home, other)\nMedu / Fedu: escolaridade da mãe e do pai (0 a 4)\n\n\n\n\n\nCódigo\nNível de Educação dos responsáveis\n\n\n\n\n0\nnenhum\n\n\n1\nFundamenal I\n\n\n2\nFundamenal II\n\n\n3\nEnsino Médio\n\n\n4\nEnsin Superior\n\n\n\n\n\nguardian: responsável (mother, father, other)\ntraveltime: tempo de deslocamento até a escola (1 - &lt;15min a 4 - &gt;1h)\nstudytime: tempo de estudo semanal (1 - &lt;2h a 4 - &gt;10h)\nfailures: número de reprovações anteriores (0 a 4)\nschoolsup: apoio educacional extra (yes/no)\nfamsup: apoio da família (yes/no)\npaid: aulas extras pagas (yes/no)\nactivities: atividades extracurriculares (yes/no)\nnursery: frequentou pré-escola (yes/no)\nhigher: desejo de cursar ensino superior (yes/no)\ninternet: acesso à internet em casa (yes/no)\nromantic: possui relacionamento amoroso (yes/no)\nfamrel: qualidade do relacionamento familiar (1 - ruim a 5 - excelente)\nfreetime: tempo livre após a escola (1 a 5)\ngoout: frequência de saída com amigos (1 a 5)\nDalc: consumo de álcool durante a semana (1 a 5)\nWalc: consumo de álcool no final de semana (1 a 5)\nhealth: estado de saúde (1 - muito ruim a 5 - muito bom)\nabsences: número de faltas (0 a 93)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Métodologia:</span>"
+    ]
+  },
+  {
+    "objectID": "02-metodologia.html#variáveis-de-notas",
+    "href": "02-metodologia.html#variáveis-de-notas",
+    "title": "Métodologia:",
+    "section": "Variáveis de Notas:",
+    "text": "Variáveis de Notas:\nG1: nota do 1º período (0 a 20) G2: nota do 2º período (0 a 20) G3: nota final do ano (0 a 20) — variável alvo do modelo\nObservação: A variável alvo G3 possui forte correlação com G1 e G2, pois estas representam avaliações dos períodos anteriores no mesmo ano letivo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Métodologia:</span>"
+    ]
+  },
+  {
+    "objectID": "02-metodologia.html#tecnologias-empregadas",
+    "href": "02-metodologia.html#tecnologias-empregadas",
+    "title": "Métodologia:",
+    "section": "Tecnologias Empregadas",
+    "text": "Tecnologias Empregadas\n\nRFID: Tecnologia proposta para automatizar o controle de presença.\nPython: Uma linguagem usada para análise e modelagem.\nBibliotecas: Pandas,Numpy , Matplotlib, Seaborn, Scikit-Learn.\nAprendizado de Máquina: Retorno de Floresta Aleatória.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Métodologia:</span>"
+    ]
+  },
+  {
+    "objectID": "02-metodologia.html#fluxograma-do-projeto",
+    "href": "02-metodologia.html#fluxograma-do-projeto",
+    "title": "Métodologia:",
+    "section": "Fluxograma do Projeto",
+    "text": "Fluxograma do Projeto\n\nObtenção dos dados: Foram achados no Kaggle;\nAnalise e Compreensão dos Dados: Análise das relações entre as variáveis, distribuição das mesmas e interpretação dos dados;\nHigienização e Pré-tratamento:\n\n\nManipulação de valores incongruentes;\nAjuste da distribuição das variáveis numéricas utilizando o MinMaxScaler.\nUso de Dummys nas variaveis binárias:\n\n\nModelagem Preditiva:\n\n\nDivisão em grupos de treinamento e teste (80/20);\nUso do algoritmo um Random Forest Regrassor para antecipar a pontuação final (G3) com base na frequencia;\nUso de uma Regressão Linear para afirmar se a numero de faltas afeta positivamente na nota dos alunos.\n\n\nMétricas:\n\n\nMAE (Erro Médio Absoluto);\nMSE (Erro Médio Quadrático);\nCoeficiente de Determinação(R2).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Métodologia:</span>"
+    ]
+  },
+  {
+    "objectID": "03-desenvolvimento.html",
+    "href": "03-desenvolvimento.html",
+    "title": "Desenvolvimento",
+    "section": "",
+    "text": "Análise Exploratória\nRealizaram-se análises estatísticas e gráficos, com ênfase em:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Desenvolvimento</span>"
+    ]
+  },
+  {
+    "objectID": "03-desenvolvimento.html#análise-exploratória",
+    "href": "03-desenvolvimento.html#análise-exploratória",
+    "title": "Desenvolvimento",
+    "section": "",
+    "text": "Quantidade de Estudantes por Escola.\n\n\n\nPontuação média os estudantes por escola.\n\n\n\nPontuação final média por faixa de faltas por escola\n \n\n\nA distribuição da frequência por escola.\n \n\n\nRelação entre presença e pontuação.\n\n\n\nCorrelação notas\n\n\n\nRelação nota Parcial e Final\n\nEssas avaliações evidenciaram uma tendência evidente: estudantes que frequentam mais frequentemente tendem a alcançar melhores desempenhos acadêmicos.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Desenvolvimento</span>"
+    ]
+  },
+  {
+    "objectID": "03-desenvolvimento.html#hiperparâmetros-do-random-forest-regressor",
+    "href": "03-desenvolvimento.html#hiperparâmetros-do-random-forest-regressor",
+    "title": "Desenvolvimento",
+    "section": "Hiperparâmetros do Random Forest Regressor:",
+    "text": "Hiperparâmetros do Random Forest Regressor:\n\nQuantidade de estimadores: 100\nProfundidade máxima (max_depth): Não definida (árvores se desenvolveram de forma autônoma)\nEstado Aleatório: 42 (para replicabilidade)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Desenvolvimento</span>"
+    ]
+  },
+  {
+    "objectID": "03-desenvolvimento.html#dicionário-de-dummys",
+    "href": "03-desenvolvimento.html#dicionário-de-dummys",
+    "title": "Desenvolvimento",
+    "section": "Dicionário de Dummys",
+    "text": "Dicionário de Dummys\n\n\n\n\n\n\n\n\n\nVariável\nValor\nSignificado\n\n\n\n\nschoolsup\n1\nAluno recebe suporte educacional extra\n\n\nfamsup\n1\nAluno recebe suporte extra da família\n\n\npaid\n1\nAluno paga aulas extras\n\n\nactivities\n1\nAluno participa de atividades extracurriculares\n\n\nnursery\n1\nAluno frequentou o berçário\n\n\nhigher\n1\nAluno pretende fazer curso superior\n\n\ninternet\n1\nAluno tem acesso à internet em casa\n\n\nromantic\n1\nAluno está em um relacionamento romântico",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Desenvolvimento</span>"
+    ]
+  },
+  {
+    "objectID": "04-resultados.html",
+    "href": "04-resultados.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Variaveis com Maior Relevância:\nInterpretação das variaveis: É notoória como para o modelo a variavel \\(Absence\\) (falatas/aussncia) se mostrou como a mais relevante para a resolução do problema",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "04-resultados.html#métricas-random-forest-regressor",
+    "href": "04-resultados.html#métricas-random-forest-regressor",
+    "title": "Resultados",
+    "section": "Métricas Random Forest Regressor:",
+    "text": "Métricas Random Forest Regressor:\n\nMédia R2: 0.82 Indica Bom ajuste; MAE: 1.25 Indica de baixa precisão média; MSE: 2.79 Indica que o modedelo está dentro de uma faixa tolerável, melhorando a precisão das previsões.\nEsses achados corroboram a hipótese inicial: existe uma correlação significativa entre a presença dos estudantes e suas notas.\nAnálise de Overfitting (RandomForest)\nObserve se o R² de treinamento é similar ao de teste, indicando menor propensão a overfiting",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "04-resultados.html#métricas-regressão-liniear",
+    "href": "04-resultados.html#métricas-regressão-liniear",
+    "title": "Resultados",
+    "section": "Métricas Regressão liniear :",
+    "text": "Métricas Regressão liniear :\n\nMean Absolute Error (MAE): 3.41\nMean Squared Error (MSE): 20.27\nR-squared (R²): 0.10",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "04-resultados.html#interpretação-dos-modelos",
+    "href": "04-resultados.html#interpretação-dos-modelos",
+    "title": "Resultados",
+    "section": "Interpretação dos modelos:",
+    "text": "Interpretação dos modelos:\nEstratégias voltadas para o aumento da frequência dos alunos podem levar a melhorias significativas no desempenho dos alunos. Essas percepções foram cruciais para demonstrar aos interessados a viabilidade da implementação do sistema RFID.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "05-conclusao.html",
+    "href": "05-conclusao.html",
+    "title": "Conclusão",
+    "section": "",
+    "text": "Nossa análise mostrou que faltar às aulas \\((Absence\")\\) é um fator que mais pesa na previsão do desempenho dos alunos, com uma importância de cerca de 0.18. Isso significa que quanto mais um aluno falta, pior tende a ser seu desempenho. Nossos testes iniciais da Regressão Linear também apontam para essa relação, mesmo que o resultado do R² tenha dado 0.10 sugira que há mais a ser explorado.\nAlém disso, conseguimos criar um modelo preditivo usando Random Forest que explica em média 82% da variação nas notas dos alunos. Isso reforça muito a ideia de que estar presente na escola é crucial para ir bem nos estudos.\nA tecnologia RFID surge como uma solução promissora para melhorar o controle de presença, coletar dados automaticamente para análises futuras e ajudar na administração da escola e os alunos. Com base nisso, os próximos passos incluem criar um modelo experimental do sistema RFID e coletar dados reais de presença com ele para deixar nosso modelo ainda mais preciso.\nÉ importante destacar que, apesar dessas descobertas claras, o desempenho dos alunos é algo complexo e exige mais investigação. Por isso, é fundamental expandir nossas análises para incluir outros fatores, como a participação em atividades extras, o desempenho em provas contínuas, o histórico escolar completo e, especialmente, questões socioeconômicas dos alunos.\nEm resumo, este projeto prova a importância do controle automático de presença para o avanço acadêmico. Ele oferece uma base sólida para futuras ações, mas também sublinha a necessidade de pesquisar mais a fundo para entender todos os elementos que influenciam o sucesso educacional.\nEm resumo, com o RFID avançaremos na análise de dados por que passaríamos a capitar algo algo que uma chamada normal não apresenta:\n\n1 - Se o aluno aproveita o tempo todo de cada aula do ano ou não (deixamos de ficar limitados a condição ‘binária’ de Presença ou Falta;\n2 - E assim testar se os alunos, em geral, chegam pontualmente, no contexto do ceub às 8h e saem as 10:50h, apresentam melhor rendimento do que outros que têm o costume de chegar atrasado (e o nivel de atraso), ou quem têm o costume de sair bem mais cedo.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conclusão</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html",
+    "href": "referencias.html",
+    "title": "Referências",
+    "section": "",
+    "text": "Base de dados utilizada\nAs referências estão organizadas no arquivo .bib e serão exibidas automaticamente.\nhttps://www.kaggle.com/datasets/whenamancodes/student-performance/data",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  },
+  {
+    "objectID": "referencias.html#estudo-para-o-trabalho",
+    "href": "referencias.html#estudo-para-o-trabalho",
+    "title": "Referências",
+    "section": "Estudo para o trabalho",
+    "text": "Estudo para o trabalho\nhttps://consortium.uchicago.edu/sites/default/files/2018-10/07%20What%20Matters%20Final.pdf",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Referências</span>"
+    ]
+  }
+]
