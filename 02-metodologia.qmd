@@ -3,7 +3,7 @@ engine: python #
 format: pdf
 ---
 
-# 2 - Métodologia:
+# Métodologia:
 
 Este projeto fez uso de informações públicas sobre o rendimento de alunos do ensino secundário de duas instituições de ensino portuguesas: Gabriel Pereira (GP) e Mousinho da Silveira (MS). A coleta de dados ocorreu através de relatórios escolares e questionários aplicados aos estudantes.
 
@@ -62,14 +62,14 @@ G1: nota do 1º período (0 a 20) G2: nota do 2º período (0 a 20) G3: nota fin
 
 Observação: A variável alvo G3 possui forte correlação com G1 e G2, pois estas representam avaliações dos períodos anteriores no mesmo ano letivo.
 
-##Tecnologias Empregadas
+## Tecnologias Empregadas
 
 -   RFID: Tecnologia proposta para automatizar o controle de presença.
 -   Python: Uma linguagem usada para análise e modelagem.
 -   Bibliotecas: Pandas,Numpy , Matplotlib, Seaborn, Scikit-Learn.
 -   Aprendizado de Máquina: Retorno de Floresta Aleatória.
 
-### Fluxograma do Projeto
+## Fluxograma do Projeto
 
 1.  Obtenção dos dados: Foram achados no Kaggle;
 

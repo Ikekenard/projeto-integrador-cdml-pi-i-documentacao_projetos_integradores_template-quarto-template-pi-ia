@@ -3,23 +3,42 @@ engine: python #
 format: pdf
 ---
 
-# 3 - Desenvolvimento
+# Desenvolvimento
 
 ## Análise Exploratória
 
 Realizaram-se análises estatísticas e gráficos, com ênfase em:
 
-### 1 - A atribuição das pontuações aos estudantes.
+### Quantidade de Estudantes por Escola.
 
-\#### Gŕaico de barras comparando notas estudantes de cada escola
+![](imagens/dist-estudantes.png)
 
-### 2 - A distribuição da frequência.
+### Pontuação média os estudantes por escola.
 
-\#### Histograma de frequencia de cada escola
 
-### 3 - Relação entre presença e pontuação.
+![](imagens/comp-notas-x-escolas.png)
 
-\#### Heatmap de presença x pontuação por escola
+### Pontuação final média por faixa de faltas por escola
+![](imagens/media-notas-GP.png)
+![](imagens/media-notas-MS.png)
+
+### A distribuição da frequência por escola.
+
+![](imagens/dist-faltas-E-GP.png)
+![](imagens/dist-faltas-E-MS.png)
+
+### Relação entre presença e pontuação.
+
+![](imagens/corr-aus-notas.png)
+
+### Correlação notas 
+
+![](imagens/corr_notas.png)
+
+
+### Relação nota Parcial e Final
+
+![](imagens/relacoes-lineares-notas.png)
 
 Essas avaliações evidenciaram uma tendência evidente: estudantes que frequentam mais frequentemente tendem a alcançar melhores desempenhos acadêmicos.
 

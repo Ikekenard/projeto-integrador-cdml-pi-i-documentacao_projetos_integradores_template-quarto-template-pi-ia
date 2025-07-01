@@ -5,12 +5,12 @@ project:
 book:
   title: "Projeto Integrador I: Análise de Desempenho Acadêmico x Presença em Sala"
   author:
-    - Ike Gabriel Rodrigues Kenard,
-    - Leonardo de Lima Amaral,
-    - Marcelo Saraiva Cavalvanti,
-    - Vitor Nascimento Franco,
-    - Rafael Mascarenhas Brown de Andrade,
-    - Alessandra de Souza Gonçalves,
+    - Ike Gabriel Rodrigues Kenard
+    - Leonardo de Lima Amaral
+    - Marcelo Saraiva Cavalvanti
+    - Vitor Nascimento Franco
+    - Rafael Mascarenhas Brown de Andrade
+    - Alessandra de Souza Gonçalves
     - Rodrigo Lins Bezerra Magalhaes
   date: today
   chapters:
@@ -25,10 +25,14 @@ book:
 format:
   pdf:
     pdf-engine: lualatex
-    documentclass: book
+    documentclass: scrreprt # substitui 'book' e remove 'Chapter X'
+    classoption: [openany]
     include-before-body: contracapa.tex
     toc: false
     number-sections: false
+    fig-pos: "H"
+    fig-align: center
+    keep-tex: true
     bibliography: refs.bib
   html:
     toc: true

@@ -3,7 +3,7 @@ engine: python #
 format: pdf
 ---
 
-# 1 - Objetivos e Motivações:
+# Objetivos e Motivações:
 
 Historicamente, a presença dos estudantes em sala de aula está ligada a um desempenho acadêmico superior. Este projeto visa examinar a conexão entre a presença dos alunos e seus resultados finais, bem como provar que a viabilidade do RFID para uma melhor auxílio acadêmico
 

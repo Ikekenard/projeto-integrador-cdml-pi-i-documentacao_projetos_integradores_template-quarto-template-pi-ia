@@ -1,5 +1,5 @@
 ---
-title: "P1 - Análise de Desempenho Acadêmico com Base na Frequência em Sala"
+     # title: "P1 - Análise de Desempenho Acadêmico com Base na Frequência em Sala"
 author: "Ike Gabriel, Leoanrdo Amaral, Marcelo Cavalvanti, Vitor Nascimento, Rafael Mascarenhas, Alessandra Gonçalves, Rodrigo Lins"
 date: "2025"
 format:

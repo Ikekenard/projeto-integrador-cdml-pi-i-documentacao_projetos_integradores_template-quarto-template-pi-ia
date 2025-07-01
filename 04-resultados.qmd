@@ -3,17 +3,17 @@ engine: python #
 format: pdf
 ---
 
-# 4 - Resultados
+# Resultados
 
 ## Variaveis com Maior Relevância:
 
-![](imagens/grafico_imp_vrs.png.png)
+![](imagens/Relavancia-var.png)
 
 **Interpretação das variaveis: É notoória como para o modelo a variavel** $Absence$ (falatas/aussncia) se mostrou como a mais relevante para a resolução do problema
 
 ## Métricas Random Forest Regressor:
 
-![](imagens/metrics.png)
+![](imagens/RFR-r2.png)
 
 Média R2: 0.82 Indica Bom ajuste; MAE: 1.25 Indica de baixa precisão média; MSE: 2.79 Indica que o modedelo está dentro de uma faixa tolerável, melhorando a precisão das previsões.
 

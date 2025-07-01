@@ -3,7 +3,7 @@ engine: python #
 format: pdf
 ---
 
-# 5 - Conclusão
+# Conclusão
 
 Nossa análise mostrou que **faltar às aulas** $(Absence")$ é um fator que mais pesa na previsão do desempenho dos alunos, com uma importância de cerca de 0.18. Isso significa que quanto mais um aluno falta, pior tende a ser seu desempenho. Nossos testes iniciais da Regressão Linear também apontam para essa relação, mesmo que o resultado do R² tenha dado 0.10 sugira que há mais a ser explorado.
 
